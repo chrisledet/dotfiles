@@ -1,0 +1,8 @@
+.DS_Store
+.svn
+.tissues
+*~
+*.swp
+config/database.yml
+log/*.log
+vim/vim.symlink/bundle/*

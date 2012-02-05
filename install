@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+current_dir = File.expand_path(File.dirname(File.dirname(__FILE__)))
+
+# install symlinks
+Dir["**/*.symlink"].each do |symlink|
+  file = symlink.split(".symlink").first
+  destination = File.join(Dir.home, ".#{file}")
+  `rm #{destination}`
+  `ln -s #{File.join(current_dir, symlink)} #{destination}`
+end

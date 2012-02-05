@@ -1,0 +1,47 @@
+[user]
+  name = Chris Ledet
+  email = christopher.ledet@gmail.com
+
+[github]
+  user = chrisledet
+
+[color]
+  ui = auto
+  sh = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow bold
+  remote = green bold
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green bold
+  untracked = blue bold
+
+[color "sh"]
+  workdir = cyan bold reverse
+  dirty = red bold
+  branch = magenta reverse
+
+[diff]
+  renames = copies
+
+[alias]
+  st = status -sb
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  logg = log --graph --pretty=oneline --abbrev-commit
+  ll = log --pretty=format:'%C(yellow)%h%Creset %Cgreen%an%Creset %s %C(yellow)%d%Creset %Cred(%ar)' --graph --max-count=16
+  ls = ls-files
+  last = log -1 HEAD
+  x = checkout HEAD
+  who = shortlog -s -n
