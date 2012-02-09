@@ -1,5 +1,5 @@
 # Taken from Zach Holman's dotfiles
-# github.com/holman/dotfiles
+# http://github.com/holman/dotfiles
 
 autoload colors && colors
 

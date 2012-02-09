@@ -1,0 +1,5 @@
+#!/bin/sh
+current_branch=/usr/bin/git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'}
+git co master
+git merge $current_branch
+echo "Finished merging $current_branch into master"
