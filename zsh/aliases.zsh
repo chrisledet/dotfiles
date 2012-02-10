@@ -18,6 +18,7 @@ fi
 alias sr="screen -r"
 alias fcount="ls -1R | wc -l"
 alias reloadsh="source ~/.zshrc"
+alias cleanlogs="sudo rm -rf /private/var/log/asl/*.asl"
 
 # # # # # # # # # # # # # # # #
 # Git aliases                 #
