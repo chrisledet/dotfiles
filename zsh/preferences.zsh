@@ -44,3 +44,5 @@ bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[^N' newtab
 bindkey "^[[3~" delete-char
+
+chflags nohidden ~/Library

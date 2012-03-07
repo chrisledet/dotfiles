@@ -4,11 +4,12 @@
 autoload colors && colors
 
 git_branch() {
-  echo $(/usr/bin/git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  echo $(/usr/local/bin/hub symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  # echo $(gs | xargs | awk '{ print $2 }')
 }
 
 git_dirty() {
-  st=$(/usr/bin/git status 2>/dev/null | tail -n 1)
+  st=$(/usr/local/bin/hub status 2>/dev/null | tail -n 1)
   if [[ $st == "" ]]
   then
     echo ""
@@ -23,12 +24,12 @@ git_dirty() {
 }
 
 git_prompt_info () {
- ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
+ ref=$(/usr/local/bin/hub symbolic-ref HEAD 2>/dev/null) || return
  echo "${ref#refs/heads/}"
 }
 
 unpushed () {
-  /usr/bin/git cherry -v origin/$(git_branch) 2>/dev/null
+  /usr/local/bin/hub cherry -v origin/$(git_branch) 2>/dev/null
 }
 
 need_push () {
@@ -41,7 +42,8 @@ need_push () {
 }
 
 ruby_version() {
-  ruby -e "puts RUBY_VERSION"
+  # ruby -v | awk '{ print $2 }'
+  ruby -e "print RUBY_VERSION"
 }
 
 ruby_prompt() {
@@ -53,7 +55,12 @@ directory_name() {
 }
 
 prompt() {
-  echo "\n$(ruby_prompt) in $(directory_name) $(git_dirty)\n$ "
+  # if [[ $git_dirty == "" ]]
+  # then
+    echo "($(ruby_prompt) in $(directory_name))\$ "
+  # else
+    # echo "($(ruby_prompt) in $(directory_name) $(git_ditry)) \$ "
+  # fi
 }
 
 export PROMPT="$(prompt)"
