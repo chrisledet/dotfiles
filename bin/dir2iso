@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Usage: dir2iso <dir> <iso file>
+# Converts directory into an ISO
+#
+
+hdiutil makehybrid -iso -joliet -o $2 $1
