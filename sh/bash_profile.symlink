@@ -4,8 +4,20 @@ do
   source ${f}
 done
 
-# prompt
-export PS1="$ "
+# colors
+# 30 — Black
+# 31 — Red
+# 32 — Green
+# 33 — Yellow
+# 34 — Blue
+# 35 — Magenta
+# 36 — Cyan
+# 37 — White
+COLOR_RED='\[\e[32m\]'
+COLOR_RESET='\[\e[0m\]'
 
-# RVM
+# prompt
+PS1="${COLOR_RED}$ ${COLOR_RESET}"
+
+# rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

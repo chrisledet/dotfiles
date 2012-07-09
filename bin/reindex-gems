@@ -1,0 +1,1 @@
+ssh -q -t pacdcitrcdeva1.cable.comcast.com PATH=/opt/ruby-1.9.2-p180-gems/bin:$PATH sudo /opt/amtools/bin/geminabox-reindex.rb
