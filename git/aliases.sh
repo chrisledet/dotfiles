@@ -1,7 +1,3 @@
-# # # # # # # # # # # # # # # #
-# Git aliases                 #
-# # # # # # # # # # # # # # # #
-
 # brew install hub
 alias git='`which ruby` `which hub`'
 

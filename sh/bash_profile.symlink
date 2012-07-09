@@ -1,0 +1,11 @@
+# dotfiles
+for f in $HOME/.dotfiles/**/*.sh
+do
+  source ${f}
+done
+
+# prompt
+export PS1="$ "
+
+# RVM
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
