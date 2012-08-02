@@ -1,6 +1,3 @@
-# brew install hub
-alias git='`which ruby` `which hub`'
-
 alias gl="git log --pretty=format:'%C(yellow)%h%Creset %Cgreen%an%Creset %s %C(yellow)%d%Creset %Cred(%ar)' --graph --max-count=16"
 alias gp='git push origin HEAD'
 alias gd='git diff'
