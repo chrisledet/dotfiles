@@ -13,11 +13,17 @@ done
 # 35 — Magenta
 # 36 — Cyan
 # 37 — White
-COLOR_RED='\[\e[32m\]'
+COLOR_GREEN='\[\e[32m\]'
+COLOR_MAGENTA='\[\e[35m\]'
 COLOR_RESET='\[\e[0m\]'
 
+# from visionmedia https://gist.github.com/3288446
+function git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \(\1\)/'
+}
+
 # prompt
-PS1="${COLOR_RED}$ ${COLOR_RESET}"
+PS1="${COLOR_GREEN}$ \W${COLOR_RESET}${COLOR_MAGENTA}\$(git_branch)${COLOR_RESET}: "
 
 # rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
