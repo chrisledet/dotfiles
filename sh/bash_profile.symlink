@@ -23,7 +23,7 @@ function git_branch {
 }
 
 # prompt
-PS1="${COLOR_GREEN}$ \W${COLOR_RESET}${COLOR_MAGENTA}\$(git_branch)${COLOR_RESET}: "
+PS1="${COLOR_GREEN}(\W)${COLOR_RESET}${COLOR_MAGENTA}\$(git_branch)${COLOR_RESET} ${COLOR_GREEN}\$${COLOR_RESET} "
 
 # rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
