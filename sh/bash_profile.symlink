@@ -27,3 +27,6 @@ PS1="${COLOR_GREEN}(\W)${COLOR_RESET}${COLOR_MAGENTA}\$(git_branch)${COLOR_RESET
 
 # rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+# Android SDK
+export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r20.0.1
