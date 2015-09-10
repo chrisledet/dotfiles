@@ -1,8 +1,16 @@
-export EDITOR="subl -w"
+# Editor
+export EDITOR="vi"
+
+# C and C++ compiler
 export CC=`which clang`
 
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:$PATH:$HOME/bin"
+# Go
+export GOPATH=$HOME/Development/go
 
-# rbenv
-eval "$(rbenv init -)"
-export RUBYLIB=/usr/local/lib/ruby/1.8:/usr/local/lib/ruby/1.8/universal-darwin12.0
+# System
+export TRANSCODING_PATH="$HOME/Development/video-transcoding-scripts"
+
+export PATH="$PATH:$HOME/.rbenv/bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$TRANSCODING_PATH"
