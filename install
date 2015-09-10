@@ -23,5 +23,3 @@ Dir["bin/*"].each do |bin_file|
   symlink File.join(__dir__, bin_file), "$HOME/#{bin_file}"
 end
 
-# Install Sublime Text preferences
-symlink File.join(__dir__, 'editor', 'Preferences.sublime-settings'), sublime_app_support
