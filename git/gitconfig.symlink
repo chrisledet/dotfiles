@@ -1,6 +1,6 @@
 [user]
 	name = Chris Ledet
-	email = christopher.ledet@gmail.com
+	email = me@chrisledet.com
 
 [github]
 	user = chrisledet
@@ -45,7 +45,18 @@
 	last = log -1 HEAD
 	x = checkout HEAD
 	who = shortlog -s -n
+	fpush = !git push --force origin $(git rev-parse --abbrev-ref HEAD);
+	recommit = commit --no-edit --amend
 [credential]
 	helper = osxkeychain
 [pull]
 	rebase = true
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
