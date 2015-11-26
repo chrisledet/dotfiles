@@ -5,7 +5,7 @@ export EDITOR="vi"
 export CC=`which clang`
 
 # Go
-export GOPATH=$HOME/Development/go
+export GOPATH=$HOME/Code/go
 
 # System
 export TRANSCODING_PATH="$HOME/Development/video-transcoding-scripts"
