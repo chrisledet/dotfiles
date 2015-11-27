@@ -1,0 +1,24 @@
+{
+  "color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+  "folders":
+  [
+    {
+      "file_exclude_patterns":
+      [
+        "*.meta",
+        ".keep",
+        "tmp"
+      ]
+    }
+  ],
+  "font_face": "Fira Mono",
+  "font_size": 13.0,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "tab_size": 2,
+  "theme": "Spacegray.sublime-theme",
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true
+}
