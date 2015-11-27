@@ -1,9 +1,3 @@
-# dotfiles
-for f in $HOME/.dotfiles/**/*.sh
-do
-  source ${f}
-done
-
 # colors
 # 30 — Black
 # 31 — Red
@@ -38,8 +32,8 @@ then
   alias la='gls -A --color'
 fi
 
-alias reload="source ~/.bashrc"
 alias bx="bundle exec"
+alias gs="git status -bs"
 
 export EDITOR="vi"
 export CC=`which clang`

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Reloading shell"
+source $HOME/.bash_profile
