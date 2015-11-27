@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-dotfiles = Dir[".*"] - [".", "..", ".gitignore"]
+dotfiles = Dir[".*"] - [".", "..", ".gitignore", ".git"]
 
 dotfiles.each do |dotfile|
   source = File.join(Dir.pwd, dotfile)
