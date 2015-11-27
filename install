@@ -1,25 +1,15 @@
 #!/usr/bin/env ruby
 
-def symlink(from, to)
-  `ln -sf #{from} #{to}`
-end
+dotfiles = Dir[".*"] - [".", "..", ".gitignore"]
 
-def sublime_app_support
-  File.join File.expand_path('~'), 'Library', 'Application\ Support', 'Sublime\ Text\ 2', 'Packages', 'User'
-end
+dotfiles.each do |dotfile|
+  source = File.join(Dir.pwd, dotfile)
+  destination = File.join(Dir.home, dotfile)
 
-Dir.glob("**/").each do |directory|
-  # install symlinks
-  Dir["#{directory}/*.symlink"].each do |symlink|
-    symlink = symlink.split("//").last
-    file = symlink.split(".symlink").first
-    destination = File.join(Dir.home, ".#{file}")
-    symlink File.join(__dir__, directory, symlink), destination
+  if File.exist?(destination)
+    system("rm -r #{destination}")
   end
-end
 
-# symlink bins
-Dir["bin/*"].each do |bin_file|
-  symlink File.join(__dir__, bin_file), "$HOME/#{bin_file}"
+  puts "installing #{destination}"
+  File.symlink(source, destination)
 end
-

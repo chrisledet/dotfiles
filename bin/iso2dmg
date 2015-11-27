@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# Usage: iso2dmg <iso file> <dmg file>
-# Converts ISO to DMG
-#
-
-hdiutil convert $1 -format UDRW -o $2
