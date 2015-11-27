@@ -34,6 +34,7 @@ fi
 
 alias bx="bundle exec"
 alias gs="git status -bs"
+alias t="tail -f log/*.log"
 
 export EDITOR="vi"
 export CC=`which clang`
