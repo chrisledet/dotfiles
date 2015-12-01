@@ -34,6 +34,8 @@ fi
 
 alias bx="bundle exec"
 alias gs="git status -bs"
+alias gd="git diff"
+alias gdc="git diff --cached"
 alias t="tail -f log/*.log"
 
 export EDITOR="vi"
